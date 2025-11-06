@@ -18,7 +18,7 @@ const config: QuartzConfig = {
     },
     locale: "uk-UA",
     baseUrl: "ans.linerds.us",
-    ignorePatterns: ["private", "templates", ".obsidian"],
+    ignorePatterns: ["private", "templates", ".obsidian", "README.md"],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
