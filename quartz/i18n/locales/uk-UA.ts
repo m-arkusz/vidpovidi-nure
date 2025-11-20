@@ -59,6 +59,9 @@ export default {
     contentMeta: {
       readingTime: ({ minutes }) => `${minutes} хв читання`,
     },
+    shortLink: {  
+      label: "Коротке посилання",  
+    },
   },
   pages: {
     rss: {
