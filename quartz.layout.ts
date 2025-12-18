@@ -41,6 +41,7 @@ export const defaultContentPageLayout: PageLayout = {
       ],
     }),
     Component.Explorer({  
+      folderDefaultState: "open",
       sortFn: (a, b) => {  
         // Use slugSegment for actual file/folder name from file system  
         return a.slugSegment.localeCompare(b.slugSegment, undefined, {  
@@ -73,6 +74,7 @@ export const defaultListPageLayout: PageLayout = {
       ],
     }),
     Component.Explorer({  
+      folderDefaultState: "open",
       sortFn: (a, b) => {  
         // Use slugSegment for actual file/folder name from file system  
         return a.slugSegment.localeCompare(b.slugSegment, undefined, {  
