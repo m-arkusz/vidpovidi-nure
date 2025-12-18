@@ -79,7 +79,14 @@ const config: QuartzConfig = {
       Plugin.AliasRedirects(),
       Plugin.ComponentResources(),
       Plugin.ContentPage(),
-      Plugin.FolderPage(),
+      Plugin.FolderPage({
+        sort: (f1: QuartzPluginData, f2: QuartzPluginData) => {  
+          // Extract file name from slug (last segment after removing .md)  
+          const name1 = f1.slug?.split('/').pop()?.replace('.md', '') ?? ""  
+          const name2 = f2.slug?.split('/').pop()?.replace('.md', '') ?? ""  
+          return name1.localeCompare(name2, undefined, { numeric: true })  
+        }  
+      }),
       Plugin.TagPage(),
       Plugin.ContentIndex({
         enableSiteMap: true,

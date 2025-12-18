@@ -40,7 +40,15 @@ export const defaultContentPageLayout: PageLayout = {
         // { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({  
+      sortFn: (a, b) => {  
+        // Use slugSegment for actual file/folder name from file system  
+        return a.slugSegment.localeCompare(b.slugSegment, undefined, {  
+          numeric: true,  
+          sensitivity: "base",  
+        })  
+      }  
+    })
   ],
   right: [
     // Component.Graph(),
@@ -64,7 +72,15 @@ export const defaultListPageLayout: PageLayout = {
         },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({  
+      sortFn: (a, b) => {  
+        // Use slugSegment for actual file/folder name from file system  
+        return a.slugSegment.localeCompare(b.slugSegment, undefined, {  
+          numeric: true,  
+          sensitivity: "base",  
+        })  
+      }  
+    })
   ],
   right: [],
 }
