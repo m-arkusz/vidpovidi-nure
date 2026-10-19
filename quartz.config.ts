@@ -17,7 +17,7 @@ const config: QuartzConfig = {
       provider: null,
     },
     locale: "uk-UA",
-    baseUrl: "ans.linerds.us",
+    baseUrl: "m-arkusz.github.io/vidpovidi-nure",
     ignorePatterns: ["private", "templates", ".obsidian", "README.md"],
     defaultDateType: "modified",
     theme: {
