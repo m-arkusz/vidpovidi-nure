@@ -18,7 +18,7 @@ const ShortLinkDisplay: QuartzComponent = ({ cfg, fileData }: QuartzComponentPro
   return (  
     <div class="short-link-display">  
       <span class="short-link-label">{i18n(cfg.locale).components.shortLink.label}: </span>  
-      <a href={`/${shortPath}`} class="internal">  
+      <a href={`${shortLink}`} class="internal">  
         {shortLink}  
       </a>  
     </div>  
